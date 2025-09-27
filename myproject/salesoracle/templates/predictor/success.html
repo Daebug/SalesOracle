@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    
+    <h2>The predicted success rate for your business is: {{ predicted_success_rate }}%</h2>
+
+    <p>The prediction was made using a machine learning model trained with the Linear Regression algorithm. The model analyzed various factors including sales revenue, cost of goods sold, and operating expenses to estimate the likelihood of success.</p>
+
+    <p>The formula used for prediction is based on the linear regression equation:</p>
+    <p>Success Rate = β0 + β1 * Sales Revenue + β2 * Cost of Goods Sold + β3 * Operating Expenses</p>
+
+    <h2>Success Indicator: {{ success_indicator }}</h2>
+
+    <h3>Suggestions:</h3>
+    <ul>
+        {% for suggestion in suggestions %}
+            <li>{{ suggestion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

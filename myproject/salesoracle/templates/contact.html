@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Oracle</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/allpage.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</head>
+
+<body>
+    <div class="navbar-nav" style="
+        display: flex;
+        align-items: center;
+        padding: 10px 10px 10px;
+        background-color: aliceblue;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      ">
+        <a class="navbar-brand" style="position: absolute; left: 60px" href="{% url 'salesoracle:index' %}">
+            <img src="{% static 'images/mlogo.png' %}" alt="LOGO" height="40rem" />
+        </a>
+
+        <ul class="navbar-nav" style="display: flex; flex-direction: row; gap: 50px">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'salesoracle:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'salesoracle:about' %}">About</a>
+            </li>
+            <li class="nav-item" style="font-family: montserrat">
+                <a class="nav-link active" aria-current="page" href="{% url 'salesoracle:contact' %}">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <div class="main">
+            <div style="width:100%; height: 100%; display: flex;">
+                <div style="width: 50%; height: 100%; padding-left: 90px;">
+                    <p style="margin-top: 4rem; font-family: 'Courier New'; font-weight: bold; margin-bottom: 20px;">Say Hi to the Team</p>
+                    <h1 style=" font-size: 60px; color: #0097B2; font-family: cooper-bt; margin-bottom: 30px;">CONTACT US</h1>
+                    <form action="" method="post">
+                        <div  style="display: flex; flex-direction: column; width: 60%; gap: 10px; padding-left: 30px;">
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <input type="text" class="inputDataContact" placeholder="Name">
+                                <input type="text" class="inputDataContact" placeholder="Email">
+                                <textarea name="" class="inputDataContact2" id="" cols="30" rows="10" placeholder="Message" style="padding-left: 12px; padding-top: 8px;"></textarea>
+                                <!-- <input type="text" class="inputDataContact2" placeholder="Message"> -->
+                            </div>
+                            <div style=" display: flex; justify-content: end; align-items: end; margin-top: 20px;">
+                                <button class="btn btn-info btn-sm classlabel" style="padding-left: 15px; padding-right: 15px; font-family: montserrat; color: white; border-radius: 20px;">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div style="width: 50%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 70%; height: 70%; border-radius: 20px; " class="glass-container">
+                        <pre style="padding-left: 10px; font-family: montserrat; font-size: 1.2rem;">
+Phone Number
+(+63) 975 991 1395
+
+Address
+Don Toribio Street
+Tetuan, Zamboanga City, Philippines
+ 
+Opening Hours
+Open Monday-Saturday
+9:30am - 10:00pm
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+</body>
+
+</html>
