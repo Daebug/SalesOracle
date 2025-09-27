@@ -1,4 +1,5 @@
 import random
+import os
 from django.shortcuts import render
 from .forms import BusinessForm
 import joblib
@@ -28,7 +29,8 @@ def predict_success(request):
         form = BusinessForm(request.POST)
         if form.is_valid():
             # Load the trained model
-            model = joblib.load('salesoracle/trained_model.pkl')
+            model_path = os.path.join(os.path.dirname(__file__), 'trained_model.pkl')
+            model = joblib.load(model_path)
 
             # Get form data
             revenue = form.cleaned_data['revenue']
