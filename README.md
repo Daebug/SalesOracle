@@ -5,16 +5,19 @@ A sophisticated Django web application that leverages machine learning to predic
 ## ✨ Features
 
 ### 🔮 Predictive Analytics
+
 - **Machine Learning Engine**: Utilizes Linear Regression to predict business success rates
 - **Real-time Predictions**: Instant analysis based on financial input data
 - **Success Rate Classification**: Categorizes predictions into High (>70%), Medium (50-70%), and Low (<50%) success rates
 
 ### 💼 Business Intelligence
+
 - **Financial Metrics Analysis**: Processes sales revenue, cost of goods sold, and operating expenses
 - **Smart Recommendations**: Generates contextual advice based on predicted success rates
 - **Data-Driven Insights**: Backed by trained machine learning models for accurate predictions
 
 ### 🌐 User Interface
+
 - **Intuitive Web Interface**: Clean, professional Django-powered frontend
 - **Multi-page Navigation**: Home, About, Contact, and Prediction pages
 - **Responsive Design**: Optimized for various screen sizes and devices
@@ -23,17 +26,20 @@ A sophisticated Django web application that leverages machine learning to predic
 ## 🏗️ Technical Architecture
 
 ### Backend Framework
+
 - **Django 5.0.4**: Robust Python web framework
 - **SQLite Database**: Lightweight database for prediction storage
 - **Model-View-Template (MVT)**: Clean separation of concerns
 
 ### Machine Learning Stack
+
 - **scikit-learn**: Linear regression model implementation
 - **pandas**: Data manipulation and preprocessing
 - **joblib**: Model serialization and deployment
 - **Training Dataset**: 15 business records with financial metrics and success rates
 
 ### Key Components
+
 ```
 salesoracle/
 ├── models.py          # Database models for predictions
@@ -48,6 +54,7 @@ salesoracle/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Python 3.8+
 - Django 5.0.4
 - scikit-learn
@@ -57,34 +64,40 @@ salesoracle/
 ### Installation
 
 1. **Clone the Repository**
+
    ```bash
    git clone <repository-url>
    cd Business_success_predictor
    ```
 
 2. **Set Up Virtual Environment**
+
    ```bash
    python -m venv env
    source env/bin/activate  # On Windows: env\Scripts\activate
    ```
 
 3. **Install Dependencies**
+
    ```bash
    pip install django scikit-learn pandas joblib
    ```
 
 4. **Navigate to Project Directory**
+
    ```bash
    cd myproject
    ```
 
 5. **Run Database Migrations**
+
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
 6. **Train the Machine Learning Model**
+
    ```bash
    cd salesoracle
    python train_model.py
@@ -92,6 +105,7 @@ salesoracle/
    ```
 
 7. **Start Development Server**
+
    ```bash
    python manage.py runserver
    ```
@@ -102,13 +116,17 @@ salesoracle/
 ## 📊 How It Works
 
 ### 1. Data Input
+
 Users enter three key financial metrics:
+
 - **Sales Revenue**: Total income from business operations
 - **Cost of Goods Sold (COGS)**: Direct costs of producing goods/services
 - **Operating Expenses**: General business operational costs
 
 ### 2. Machine Learning Processing
+
 The system processes input through a trained Linear Regression model:
+
 ```python
 # Model training pipeline (train_model.py:18-19)
 model = LinearRegression()
@@ -116,13 +134,17 @@ model.fit(X_train, y_train)
 ```
 
 ### 3. Prediction & Analysis
+
 The model outputs a success rate percentage and categorizes results:
+
 - **High Success (>70%)**: Business is performing excellently
 - **Medium Success (50-70%)**: Good performance with improvement opportunities
 - **Low Success (<50%)**: Requires strategic adjustments
 
 ### 4. Intelligent Recommendations
+
 Based on the success rate, the system provides tailored advice:
+
 - **High**: Growth and expansion strategies
 - **Medium**: Optimization and efficiency improvements
 - **Low**: Recovery and restructuring guidance
@@ -130,6 +152,7 @@ Based on the success rate, the system provides tailored advice:
 ## 🔧 Model Performance
 
 The machine learning model is evaluated using:
+
 - **Training RMSE**: Root Mean Square Error on training data
 - **Testing RMSE**: Root Mean Square Error on validation data
 - **80/20 Split**: 80% training, 20% testing for robust evaluation
@@ -162,6 +185,7 @@ Business_success_predictor/
 ## 🎨 User Interface
 
 ### Available Pages
+
 - **Home (`/`)**: Landing page with project overview
 - **Prediction (`/predict/`)**: Core functionality for business analysis
 - **About (`/about/`)**: Project information and methodology
@@ -183,23 +207,3 @@ Business_success_predictor/
 - **User Authentication**: Personalized prediction history
 - **API Integration**: RESTful API for third-party integrations
 - **Industry-specific Models**: Tailored predictions for different business sectors
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Support
-
-For questions, suggestions, or issues, please visit the Contact page within the application or create an issue in the repository.
-
----
-
-*Built with ❤️ using Django, scikit-learn, and modern web technologies.*
